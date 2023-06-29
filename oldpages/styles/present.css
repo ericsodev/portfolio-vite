@@ -1,0 +1,31 @@
+@media screen and (max-width: 768px) {
+  .present {
+    flex-direction: column;
+    width: 310px;
+  }
+}
+.present {
+  display: flex;
+  gap: 3.5rem;
+}
+
+.present-section {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.present-section-title {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.present-section-content {
+  font-size: 1.05rem;
+  color: var(--grey-text);
+}
+
+.present-section-content li:not(:last-child) {
+  margin-bottom: 0.75rem;
+}

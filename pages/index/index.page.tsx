@@ -1,18 +1,17 @@
-import { Counter } from './Counter'
+import Intro from "./sections/intro";
+import About from "./sections/about";
 
-export { Page }
-
+export { Page };
+export const documentProps = {
+  title: "Eric So",
+};
 function Page() {
   return (
     <>
-      <h1>Welcome</h1>
-      This page is:
-      <ul>
-        <li>Rendered to HTML.</li>
-        <li>
-          Interactive. <Counter />
-        </li>
-      </ul>
+      <div>
+        <Intro></Intro>
+        <About></About>
+      </div>
     </>
-  )
+  );
 }

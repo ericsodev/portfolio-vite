@@ -1,0 +1,17 @@
+.nav-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-placeholder {
+    width: 200px;
+}
+
+.sidebar {
+    background: white;
+    position: fixed;
+    width: 100px;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
