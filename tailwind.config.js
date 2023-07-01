@@ -16,6 +16,7 @@ export default {
         darkgray: "#1C1B20",
         gray: "#4D4C5C",
         purple: "#716FEF",
+        tealgreen: "#26F0A7",
       },
     },
   },
