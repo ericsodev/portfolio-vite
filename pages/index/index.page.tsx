@@ -4,15 +4,18 @@ import Projects from "./sections/projects";
 import Contact from "./sections/contact";
 import React from "react";
 import Experience from "./sections/experience";
+import type { Props } from "./index.page.server";
+import { PropProvider } from "./ propContext";
 
 export { Page };
-export const documentProps = {
-  title: "Eric So",
-};
-function Page() {
+
+const PropContext = React.createContext(undefined);
+
+function Page(props: Props) {
   const container = React.useRef(null);
+  console.log(props.intro?.tagline);
   return (
-    <>
+    <PropProvider props={props}>
       <div ref={container}>
         <Intro></Intro>
         <About></About>
@@ -20,6 +23,6 @@ function Page() {
         <Experience></Experience>
         <Contact></Contact>
       </div>
-    </>
+    </PropProvider>
   );
 }

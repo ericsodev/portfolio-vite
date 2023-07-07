@@ -10,8 +10,10 @@ import MailIcon from "~icons/gridicons/mail";
 
 // @ts-expect-error Vite SVGR plugin handles SVG to ReactComponent conversion
 import { ReactComponent as Avatar } from "../avatar.svg";
+import { useProps } from "../ propContext";
 
 export default function Intro() {
+  const { intro } = useProps();
   return (
     <Layout>
       <div
@@ -22,7 +24,7 @@ export default function Intro() {
           hey, i&apos;m <strong className="text-purple">eric</strong>
         </h1>
         <p className="text-white/90 inline-block mt-3 text-sm md:text-base 2xl:text-lg">
-          i like to learn and make stuff along the way
+          {intro?.tagline}
           <div className="h-[2px] max-w-full bg-indigo-300/60 rounded-lg mt-8"></div>
         </p>
         <div className="mt-8 flex gap-7 items-center">
