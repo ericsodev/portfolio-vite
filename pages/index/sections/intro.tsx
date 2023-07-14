@@ -13,7 +13,7 @@ import { ReactComponent as Avatar } from "../avatar.svg";
 import { useProps } from "../ propContext";
 
 export default function Intro() {
-  const { intro } = useProps();
+  const { intro, contact } = useProps();
   return (
     <Layout>
       <div
@@ -29,7 +29,7 @@ export default function Intro() {
         </p>
         <div className="mt-8 flex gap-7 items-center">
           <a
-            href="/"
+            href={contact?.github || "https://github.com"}
             title="github"
             className="inline-block text-white text-3xl hover:text-indigo-400 focus:text-indigo-500
               transition-colors focus:scale-95 hover:scale-105"
@@ -38,16 +38,16 @@ export default function Intro() {
             <GithubIcon></GithubIcon>
           </a>
           <a
-            href="/"
-            title="github"
+            href={contact?.linkedin || "https://linkedin.com"}
+            title="linkedin"
             className="inline-block text-white text-2xl hover:text-indigo-400 focus:text-indigo-500
                transition-colors focus:scale-95 hover:scale-105"
           >
             <LinkedInIcon></LinkedInIcon>
           </a>
           <a
-            href="/"
-            title="github"
+            href={contact?.business_email || ""}
+            title="email"
             className="inline-block text-white text-3xl hover:text-indigo-400 focus:text-indigo-500
                transition-colors focus:scale-95 hover:scale-105"
           >

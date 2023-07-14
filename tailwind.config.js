@@ -13,6 +13,7 @@ export default {
       colors: {
         black: "#0A0A0A",
         white: "#E6E5ED",
+        offwhite: "#cfced6",
         darkgray: "#1C1B20",
         gray: "#4D4C5C",
         purple: "#716FEF",

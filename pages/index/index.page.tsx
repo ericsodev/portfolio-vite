@@ -13,7 +13,6 @@ const PropContext = React.createContext(undefined);
 
 function Page(props: Props) {
   const container = React.useRef(null);
-  console.log(props.intro?.tagline);
   return (
     <PropProvider props={props}>
       <div ref={container}>

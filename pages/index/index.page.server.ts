@@ -18,7 +18,7 @@ const indexQuery = gql(`
           }
         }
       }
-      skills(filters: {type: {ne: "unlisted"}}) {
+      skills(filters: {type: {ne: "unlisted"}}, pagination: {limit: -1}) {
           data {
               attributes {
                   name
@@ -107,8 +107,19 @@ async function prerender() {
   };
 }
 
+async function onBeforeRender() {
+  const data = await getStrapiData();
+  return {
+    pageContext: {
+      pageProps: {
+        ...data,
+      },
+    },
+  };
+}
+
 type Props = Pick<
   Awaited<ReturnType<typeof prerender>>,
   "pageContext"
 >["pageContext"]["pageProps"];
-export { prerender, Props };
+export { prerender, onBeforeRender, Props };

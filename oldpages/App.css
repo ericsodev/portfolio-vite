@@ -1,9 +1,0 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  height: auto;
-  width: 100%;
-  margin: 0;
-  background: var(--dark-blue);
-  gap: 100px;
-}
