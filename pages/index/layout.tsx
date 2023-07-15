@@ -24,7 +24,7 @@ export default function Layout({ children }: React.PropsWithChildren) {
       }}
       animate={sectionControl}
       ref={ref}
-      className="h-screen grid grid-cols-1 lg:grid-cols-6 grid-rows-6"
+      className="px-4 md:px-8 py-8 lg:p-0 min-h-screen grid grid-cols-1 lg:grid-cols-6 grid-rows-6"
     >
       {children}
     </motion.div>

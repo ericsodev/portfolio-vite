@@ -17,7 +17,7 @@ export default function Intro() {
   return (
     <Layout>
       <div
-        className="lg:col-start-2 col-span-1 lg:col-span-2 row-span-2 row-start-2 md:row-span-2
+        className="lg:col-start-2 col-span-1 lg:col-span-3 row-span-2 row-start-2 md:row-span-5
          md:row-start-3 lg:justify-self-start justify-self-center"
       >
         <h1 className="text-white text-3xl md:text-5xl font-semibold 2xl:text-6xl">
@@ -34,7 +34,6 @@ export default function Intro() {
             className="inline-block text-white text-3xl hover:text-indigo-400 focus:text-indigo-500
               transition-colors focus:scale-95 hover:scale-105"
           >
-            {/* <SiGithub></SiGithub> */}
             <GithubIcon></GithubIcon>
           </a>
           <a

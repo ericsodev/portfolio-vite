@@ -1,0 +1,4 @@
+.reactMd strong {
+    @apply font-bold;
+    @apply text-white;
+}

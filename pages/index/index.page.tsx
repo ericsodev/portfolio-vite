@@ -15,7 +15,10 @@ function Page(props: Props) {
   const container = React.useRef(null);
   return (
     <PropProvider props={props}>
-      <div ref={container}>
+      <div
+        ref={container}
+        className="selection:text-tealgreen selection:bg-white/50"
+      >
         <Intro></Intro>
         <About></About>
         <Projects></Projects>

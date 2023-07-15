@@ -50,7 +50,7 @@ const indexQuery = gql(`
         
         }
       }
-      projects(sort: ["priority"]) {
+      projects(sort: ["priority"], pagination: {limit: -1}) {
         data {
           attributes {
             name
