@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../layout";
 import { useProps } from "../ propContext";
 import ProjectCard from "../components/ProjectCard";
+import { motion } from "framer-motion";
 
 export default function Projects() {
   const { project } = useProps();
@@ -17,11 +18,11 @@ export default function Projects() {
           </h1>
           <div className="h-[2px] grow shrink mr-6 bg-indigo-300/60 rounded-lg"></div>
         </div>
-        <div className="mt-4 grid gap-4 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] auto-rows-[minmax(1fr,_200px)]">
+        <motion.div className="mt-4 max-h-[80vh] grid gap-5 grid-cols-[repeat(auto-fit,_minmax(300px,_1fr))] auto-rows-[fit-content] overflow-y-scroll overflow-x-visible">
           {project?.reverse().map((x, i) => (
             <ProjectCard project={x} key={x.name + "" + i}></ProjectCard>
           ))}
-        </div>
+        </motion.div>
       </div>
     </Layout>
   );

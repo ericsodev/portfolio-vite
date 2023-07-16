@@ -10,6 +10,7 @@ html, body {
 }
 * {
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 a {
   text-decoration: none;
@@ -20,9 +21,4 @@ a {
 }
 .navitem.is-active {
   background-color: #eee;
-}
-
-.reactMarkDown strong {
-  @apply font-bold;
-  @apply text-red-500;
 }

@@ -3,6 +3,8 @@ import type { Props } from "../index.page.server";
 import { motion } from "framer-motion";
 //@ts-ignore
 import WebIcon from "~icons/mdi/web";
+//@ts-ignore
+import ExpandIcon from "~icons/mdi/arrow-expand";
 // @ts-ignore
 import GithubIcon from "~icons/simple-icons/github";
 
@@ -18,8 +20,13 @@ const IconComponent: React.FC<{ Icon: React.FC<any> }> = ({ Icon }) => {
 
 export default function ProjectCard({ project }: { project: Project }) {
   return (
-    <motion.div className="bg-darkgray p-6 rounded-md min-h-[140px] flex flex-col gap-4 border-purple/20 border-[1px]">
-      <h1 className="text-white text-xl font-semibold">{project.name}</h1>
+    <motion.div className="cursor-pointer group bg-darkgray/60 p-6 rounded-md flex flex-col gap-4 border-stone-800 hover:border-purple/20 border-[1px]">
+      <div className="flex items-center">
+        <h1 className="text-white text-xl font-semibold">{project.name}</h1>
+        {project.long_desc && (
+          <ExpandIcon className="text-xl ml-auto text-offwhite/50 hover:text-tealgreen opacity-0 transition group-hover:opacity-100"></ExpandIcon>
+        )}
+      </div>
       <div className="flex gap-2">
         {project.github && (
           <a href={project.github} className="text-offwhite">

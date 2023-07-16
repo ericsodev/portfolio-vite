@@ -2,3 +2,12 @@
     @apply font-bold;
     @apply text-white;
 }
+
+.reactMd ul {
+    @apply list-outside list-disc pl-3.5;
+
+}
+
+.reactMd li {
+    @apply [&:not(:last-child)]:mb-2;
+}

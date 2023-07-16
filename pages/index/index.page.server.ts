@@ -27,7 +27,7 @@ const indexQuery = gql(`
               }
           }
       }  
-      experiences {
+      experiences(sort: ["start", "end"]) {
         data {
           attributes {
             company

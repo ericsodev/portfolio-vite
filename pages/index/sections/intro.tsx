@@ -17,7 +17,7 @@ export default function Intro() {
   return (
     <Layout>
       <div
-        className="lg:col-start-2 col-span-1 lg:col-span-3 row-span-2 row-start-2 md:row-span-5
+        className="lg:col-start-2 col-span-1 lg:col-span-2 row-span-2 row-start-2 md:row-span-5
          md:row-start-3 lg:justify-self-start justify-self-center"
       >
         <h1 className="text-white text-3xl md:text-5xl font-semibold 2xl:text-6xl">
@@ -58,7 +58,7 @@ export default function Intro() {
         className="md:col-span-2 lg:col-span-3 row-span-2 md:row-span-3 md:row-start-2 flex items-center
          justify-center place-items-center"
       >
-        <Avatar className="h-3/5 md:h-1/2 lg:h-2/3 place-self-center"></Avatar>
+        <Avatar className="h-4/5 md:h-1/2 lg:h-2/3 place-self-center hover:scale-105 transition-all"></Avatar>
       </div>
     </Layout>
   );

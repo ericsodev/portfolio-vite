@@ -14,7 +14,7 @@ interface EmailProps extends React.PropsWithChildren {
 const Email: React.FC<EmailProps> = ({ children, mailtoLink, className }) => {
   return (
     <a
-      className={`${className} text-white px-6 py-2 rounded-md`}
+      className={`${className} text-white px-6 py-2 rounded-md text-center`}
       href={mailtoLink}
     >
       {children}
@@ -27,8 +27,8 @@ export default function Contact() {
   return (
     <Layout>
       <div
-        className="lg:col-start-2 col-span-1 lg:col-span-3 row-span-2 row-start-2 md:row-span-2
-         md:row-start-3 lg:justify-self-start justify-self-center w-full"
+        className="lg:col-start-2 col-span-1 lg:col-span-4 row-span-6 row-start-1 md:row-span-4
+         md:row-start-2 lg:justify-self-start justify-self-center px-6 md:px-0 flex flex-col gap-4 md:gap-6 w-full"
       >
         <div className="flex items-center gap-6">
           <h1 className="inline-block text-white text-3xl md:text-5xl font-semibold 2xl:text-6xl">
@@ -36,7 +36,7 @@ export default function Contact() {
           </h1>
           <div className="h-[2px] grow shrink mr-6 bg-indigo-300/60 rounded-lg"></div>
         </div>
-        <div className="mt-4 text-white flex flex-col gap-12  ">
+        <div className="mt-4 text-white flex flex-col gap-12">
           <div className="mt-8 flex gap-7 items-center">
             <a
               href={contact?.github || "https://github.com"}
@@ -55,7 +55,7 @@ export default function Contact() {
               <LinkedInIcon></LinkedInIcon>
             </a>
           </div>
-          <div className="flex gap-4 items-start">
+          <div className="grid gap-4 grid-cols-[repeat(auto-fill,minmax(180px,1fr))]">
             <Email
               className="bg-tealgreen/70"
               mailtoLink={contact?.business_email ?? ""}
